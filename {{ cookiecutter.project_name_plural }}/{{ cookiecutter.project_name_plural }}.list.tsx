@@ -1,15 +1,15 @@
 import { match, P } from "ts-pattern";
-import * as H from "./NounInPlural.hooks.ts";
+import * as H from "./{{ cookiecutter.project_name_plural }}.hooks.ts";
 
-const NounInPluralList = () => {
-  const nounInPlural = H.useGetNounInPlural();
+const {{ cookiecutter.project_name_plural }}List = () => {
+  const {{ cookiecutter.project_name_plural_lower }} = H.useGet{{ cookiecutter.project_name_plural }}();
 
   return (
     <div>
-      <h1>NounInPlural</h1>
+      <h1>{{ cookiecutter.project_name_plural }}</h1>
 
       <br />
-      {match(nounInPlural)
+      {match({{ cookiecutter.project_name_plural_lower }})
         .with({ isLoading: true }, () => <div>Loading...</div>)
         .with({ isError: true }, () => <div>Error</div>)
         .with(
@@ -29,4 +29,4 @@ const NounInPluralList = () => {
   );
 };
 
-export { NounInPluralList };
+export { {{ cookiecutter.project_name_plural }}List };

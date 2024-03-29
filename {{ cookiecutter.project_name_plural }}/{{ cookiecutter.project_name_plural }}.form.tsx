@@ -1,13 +1,13 @@
 import * as React from "react";
 import * as _ from "lodash-es";
 import { SubmitHandler, useForm } from "react-hook-form";
-import * as T from "./NounInPlural.types.ts";
+import * as T from "./{{ cookiecutter.project_name_plural }}.types.ts";
 
-const NounInPluralForm = React.forwardRef<
-  T.NounInPluralFormElement,
-  T.NounInPluralFormProps
+const {{ cookiecutter.project_name_plural }}Form = React.forwardRef<
+  T.{{ cookiecutter.project_name_plural }}FormElement,
+  T.{{ cookiecutter.project_name_plural }}FormProps
 >(({ onSubmit, isLoading, defaultValues, ...props }, forwardedRef) => {
-  const { handleSubmit, register } = useForm<T.NounInPluralFormInputs>({
+  const { handleSubmit, register } = useForm<T.{{ cookiecutter.project_name_plural }}FormInputs>({
     defaultValues: {
       ...defaultValues,
     },
@@ -16,7 +16,7 @@ const NounInPluralForm = React.forwardRef<
   // If we pass defaultValues then it means we are updating the record.
   const isUpdate = !_.isEmpty(defaultValues);
 
-  const submitHandler: SubmitHandler<T.NounInPluralFormInputs> = (data) => {
+  const submitHandler: SubmitHandler<T.{{ cookiecutter.project_name_plural }}FormInputs> = (data) => {
     onSubmit?.(data);
   };
 
@@ -30,4 +30,4 @@ const NounInPluralForm = React.forwardRef<
   );
 });
 
-export { NounInPluralForm };
+export { {{ cookiecutter.project_name_plural }}Form };

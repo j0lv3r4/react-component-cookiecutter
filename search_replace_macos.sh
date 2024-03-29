@@ -13,11 +13,3 @@ sed -i '.bak' 's/NOUN/{{ cookiecutter.project_name_upper }}/g' NounInPlural/*
 #sed -i '.bak' 's/{{ cookiecutter.project_name_lower }}/noun/g' NounInPlural/*
 #sed -i '.bak' 's/{{ cookiecutter.project_name_plural_upper }}/NOUN_IN_PLURAL/g' NounInPlural/*
 #sed -i '.bak' 's/{{ cookiecutter.project_name_upper }}/NOUN/g' NounInPlural/*
-
-#  "project_name_plural": "NounInPlural",
-#  "project_name": "Noun",
-#  "project_name_plural_lower": "nounInPlural",
-#  "project_name_lower": "noun",
-#  "project_name_plural_upper": "NOUN_IN_PLURAL",
-#  "project_name_upper": "NOUN",
-#  "author": "Juan Olvera"
