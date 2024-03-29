@@ -1,0 +1,1 @@
+rm NounInPlural/*.bak
